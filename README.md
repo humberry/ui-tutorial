@@ -21,7 +21,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 
 8.) Please add at the end:
 
-  view = load_view('NameOfTheScript')  # e.g. load_view('Untitled 1')
+  view = load_view('NameOfTheScript')  # e.g. load_view('Untitled 1')<br />
   view.present('fullscreen')
 
 9.) Run the script and admire your label.
