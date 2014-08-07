@@ -1,0 +1,24 @@
+1.) Create a new 'Script with UI'
+2.) Change the name to 'shoppinglist'
+3.) Use the UI editor to add and rename three elements (like shoppinglist.jpg)
+textfield1 => new_item
+textview1 => shoppinglist
+button1 => add_item
+4.) Push '(No Name)' and change the heading of the View to 'shoppinglist'
+5.) Change button title to Add and action to add_new_item
+6.) It's time to edit some code
+# coding: utf-8
+
+import ui
+
+def add_new_item(sender):
+  tf_new_item = view['new_item']
+  tv_shoppinglist = view['shoppinglist']
+  tv_shoppinglist.text += tf_new_item.text + '\n'
+  tf_new_item.text = ''
+
+view = ui.load_view('shoppinglist')
+view.present('fullscreen')
+
+7.) Add borders to the textview (shoppinglist) and to the button (add_item)
+8.) Please add a second button to delete all entries in the shoppinglist
