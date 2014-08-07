@@ -6,3 +6,4 @@ the code in your script.py, but that's not what I want to show you here. I want 
 to speed up the process and write only some code. Please be patient, I'm starting with the basics.
 
 1.) Untitled 1 => hello world script<br />
+2.) hello_world_v2 => change the label every second<br />
