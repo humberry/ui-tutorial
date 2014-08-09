@@ -1,24 +1,23 @@
 # coding: utf-8
 
-import ui, sys
+import ui
 
-answer = False
-view_po = None 
+class PopOverView(ui.View):
+  view_main = None
+  view_po = None 
 
-def quit(sender):
-  global view_po	#avoid global variables (I have to learn this...)
-  def ask_user(sender):	#action method for both buttons (yes and no)
-    global view_po, answer	#avoid global variables (I have to learn this...)
-    if sender.name == 'yes':
-      answer = True 
-    else:
-      answer = False
-    view_po.close()
-  view_po = ui.load_view('po')
-  view_po.present('popover',popover_location=(400,400))
+  def __init__(self):
+    PopOverView.view_main = ui.load_view('pop-over')
+    PopOverView.view_main.present('fullscreen')
 
-view = ui.load_view('pop-over')
-view.present('fullscreen')
-while True:
-  if answer:
-    view.close()
+  def quit(self, sender):
+    def ask_user(sender):	#action method for both buttons (yes and no)
+      if sender.name == 'yes':
+        PopOverView.view_po.close()
+        PopOverView.view_main.close()
+      else:
+        PopOverView.view_po.close()
+    PopOverView.view_po = ui.load_view('po')
+    PopOverView.view_po.present('popover',popover_location=(400,400))
+
+PopOverView()
