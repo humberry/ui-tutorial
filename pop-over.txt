@@ -1,0 +1,33 @@
+Sometimes it is necessary to ask if something should really be done (quit, overwrite, delete, ...). For this task you can use a popover view.
+
+1.) Please run the script (only the iPad supports popover views) and create the initial view 'pop-over'.
+2.) Create another 'Script with UI' and call it 'po'.
+3.) The second script should contain a label 'Really want to quit' and two buttons (yes and no).
+4.) The action method of both buttons is called 'ask_user'
+5.) The code of the 'pop-over' script:
+# coding: utf-8
+
+import ui, sys
+
+answer = False
+view_po = None 
+
+def quit(sender):
+  global view_po	#avoid global variables (I have to learn this...)
+  def ask_user(sender):	#action method for both buttons (yes and no)
+    global view_po, answer	#avoid global variables (I have to learn this...)
+    if sender.name == 'yes':
+      answer = True 
+    else:
+      answer = False
+    view_po.close()
+  view_po = ui.load_view('po')
+  view_po.present('popover')
+
+view = ui.load_view('pop-over')
+view.present('fullscreen')
+while True:
+  if answer:
+    view.close()
+
+6.) Please let me know how I can avoid these global variables.
