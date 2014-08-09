@@ -11,6 +11,7 @@ class PopOverView(ui.View):
     PopOverView.view_main.present('fullscreen')
 
   def quit(self, sender):
+    PopOverView.view_main.touch_enabled = False 
     PopOverView.view_po = ui.load_view('po2')
     PopOverView.view_po.present('popover',popover_location=(400,400))
 
@@ -20,5 +21,6 @@ class PopOverView(ui.View):
       PopOverView.view_main.close()
     else:
       PopOverView.view_po.close()
+      PopOverView.view_main.touch_enabled = True 
 
 PopOverView()
