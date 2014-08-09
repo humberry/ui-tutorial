@@ -15,7 +15,7 @@ def quit(sender):
       answer = False
     view_po.close()
   view_po = ui.load_view('po')
-  view_po.present('popover')
+  view_po.present('popover',popover_location=(400,400))
 
 view = ui.load_view('pop-over')
 view.present('fullscreen')
