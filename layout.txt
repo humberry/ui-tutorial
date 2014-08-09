@@ -21,3 +21,4 @@ view = ui.load_view('layout')
 8.) Run the script and rotate your iDevice
 
 => Please reduce the width of the TextView to 372 and add a second TextView (same size) to the left. What changes are necessary to resize them automaticly? Don't forget to add a frame for the second TextView or of course you can duplicate the old TextView.
+=> layout2.pyui
