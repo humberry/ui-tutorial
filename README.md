@@ -9,5 +9,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 2.) hello_world_v2 => change the label every second<br />
 3.) shoppinglist => button, textview and textfield use<br />
 4.) layout => automatic resize ui elements<br />
+5.) pop-over => pop-over view -> Really want to quit?<br />
+
 
 
