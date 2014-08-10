@@ -16,11 +16,10 @@ class PopOverView(ui.View):
     PopOverView.view_po.present('popover',popover_location=(400,400))
 
   def ask_user(self, sender):	#action method for both buttons (yes and no)
+    PopOverView.view_po.close()
     if sender.name == 'yes':
-      PopOverView.view_po.close()
       PopOverView.view_main.close()
     else:
-      PopOverView.view_po.close()
       PopOverView.view_main.touch_enabled = True 
 
 PopOverView()
