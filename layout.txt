@@ -11,11 +11,11 @@ Okay and now in detail:
 2.) Change the size of the custom view (i-button top-right => Size => Preset iPad)
 3.) Next we adjust the ui elements
 4.) TextField (new_item) => Attributes => Frame / Auto-Resizing => 
-x=6, y=6, width=756, height=32, size-change only horizontal, anchor top+bottom (WLR)
+x=6, y=6, width=646, height=32, size-change only horizontal, anchor all sides (W)
 5.) TextView (shoppinglist) => Atrributes => Frame / Auto-Resizing =>
-x=6, y=46, with=756, height=868, size-change all directions, anchor top+bottom (WHLR)
+x=6, y=46, with=756, height=908, size-change all directions, anchor top+bottom (WHLR)
 6.) Button (add_item) => Atrributes => Frame / Auto-Resizing =>
-x=338, y=922, width=90, height=32, no size-change, anchor bottom (LRT)
+x=660, y=6, width=102, height=32, no size-change, anchor top+right (LB)
 7.) If you changed the script name to 'layout' please also adjust your code
 view = ui.load_view('layout')
 8.) Run the script and rotate your iDevice
