@@ -71,4 +71,5 @@ class AreYouEnabledView(ui.View):
         pov.add_subview(textview)
         pov.present('popover')
 
+# in the .pyui file, the "Custom View Class" must be set to AreYouEnabledView
 view = ui.load_view()
