@@ -10,3 +10,4 @@ def add_new_item(sender):
 
 view = ui.load_view('layout')
 view.present('fullscreen')
+view['shoppinglist'].text = 'SHOPPINGLIST:\n'
