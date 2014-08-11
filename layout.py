@@ -9,7 +9,6 @@ def add_new_item(sender):
         return  # no blank lines
     tv_shoppinglist = view['shoppinglist']
     tv_shoppinglist.text += new_item_text + '\n'
-    tv_shoppinglist.text = no_blank_lines(tv_shoppinglist.text)
     tf_new_item.text = ''
 
 view = ui.load_view('layout')
