@@ -2,13 +2,13 @@
 
 import ui
 
-def no_blank_lines(text):
-    return '\n'.join([line.strip() for line in text.splitlines() if line])
-
 def add_new_item(sender):
     tf_new_item = view['new_item']
+    new_item_text = tf_new_item.text.strip()
+    if not new_item_text:
+        return  # no blank lines
     tv_shoppinglist = view['shoppinglist']
-    tv_shoppinglist.text += '\n' + tf_new_item.text
+    tv_shoppinglist.text += new_item_text + '\n'
     tv_shoppinglist.text = no_blank_lines(tv_shoppinglist.text)
     tf_new_item.text = ''
 
