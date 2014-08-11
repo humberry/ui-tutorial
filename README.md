@@ -10,6 +10,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 3.) shoppinglist => button, textview and textfield use<br />
 4.) layout => automatic resize ui elements<br />
 5.) pop-over => pop-over view -> Really want to quit?<br />
+6.) AreYouEnabledView => advanced example with textfield_did_change, console_alert, speech, ... (written by cclauss)<br />
 
 
 
