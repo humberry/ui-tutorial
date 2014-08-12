@@ -13,7 +13,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 6.) AreYouEnabledView => advanced example with textfield_did_change, console_alert, speech, ... (written by cclauss)<br />
 7.) ShowTableView => directory table, empty table and table with different accessory_types/images<br />
 
-More complex sripts can be found here:<br />
+More complex scripts can be found here:<br />
 [hexviewer][]<br />
 [SFTPclient][]<br />
 
