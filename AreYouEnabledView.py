@@ -8,6 +8,7 @@ class AreYouEnabledView(ui.View):
         print('-' * 20)  # sheets are useful for seeing the console below them
 
     def did_load(self):
+        self['user text'].begin_editing()  # place the focus on the field
         self.textfield_sensitive_buttons = 'alert hud_alert popover print say'.split()
         self.enable_buttons(False)
         self.set_actions()
