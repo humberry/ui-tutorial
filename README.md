@@ -12,6 +12,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 5.) pop-over => pop-over view -> Really want to quit?<br />
 6.) AreYouEnabledView => advanced example with textfield_did_change, console_alert, speech, ... (written by cclauss)<br />
 7.) ShowTableView => directory table, empty table and table with different accessory_types/images<br />
+8.) MultipleViews => add and remove views/elements at run time<br />
 
 More complex scripts can be found here:<br />
 [hexviewer][]<br />
