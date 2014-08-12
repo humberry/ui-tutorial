@@ -14,9 +14,9 @@ to speed up the process and write only some code. Please be patient, I'm startin
 7.) ShowTableView => directory table, empty table and table with different accessory_types/images<br />
 
 More complex sripts can be found here:<br />
-[hexviewer]<br />
-[SFTPclient]<br />
+[hexviewer][]<br />
+[SFTPclient][]<br />
 
-[hexviewer][]: https://github.com/humberry/hexviewer
-[SFTPclient][]: https://github.com/humberry/sftp-client
+[hexviewer]: https://github.com/humberry/hexviewer
+[SFTPclient]: https://github.com/humberry/sftp-client
 
