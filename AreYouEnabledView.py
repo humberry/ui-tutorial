@@ -25,12 +25,10 @@ class AreYouEnabledView(ui.View):
                 subview.delegate = self
             elif isinstance(subview, ui.Button):
                 if subview.name == 'say hi':
-                    # method 3: button-specific action methods
+        # method 3: button-specific action methods
                     subview.action = self.say_hi  
                 else:
                     subview.action = self.button_pressed
-            elif isinstance(subview, ui.TextField):
-                subview.delegate = self
 
     def textfield_did_change(self, textfield):
         #speech.say('change')  # uncomment to see how often this gets called
