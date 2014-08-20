@@ -2,8 +2,7 @@
 
 import ui
 
-class MultipleViews(ui.View):
-	
+class MultipleViews(object):
     def __init__(self):
         self.view = ui.load_view('MultipleViews')
         self.view.present('fullscreen')
@@ -11,12 +10,11 @@ class MultipleViews(ui.View):
 
     def remove(self, sender):
         label = self.view['Label']
-        if label != None:
+        if label:
             self.view.remove_subview(label)
 
     def add(self, sender, text='Labeltext'):
-        label = ui.Label()
-        label.name = 'Label'
+        label = ui.Label(name='Label')
         label.text = text
         self.view.add_subview(label)
 
