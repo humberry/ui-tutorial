@@ -30,7 +30,7 @@ class MultipleViews(ui.View):
         label.x = label.y = self.labelcounter * 20
         self.add_subview(label)
 
-ui.load_view()	# Custom View Class = MultipleViews
+ui.load_view()  # Custom View Class = MultipleViews
 
 # Extra credit: modify remove() to delete the newest label first
 #                              instead of the oldest label first.
