@@ -5,7 +5,7 @@ import ui
 class MultipleViews(ui.View):
     def __init__(self):
         self.labelcounter = 0
-        self.present()
+        self.present()          #self.present(hide_title_bar = True)
 
     def did_load(self):
         self['bt_remove_label'].action = self.remove
@@ -14,8 +14,8 @@ class MultipleViews(ui.View):
 
     def draw(self):
         print self.name
-        print self.frame	#(0.0, 64.0, 1024.0, 704.0) with title // (0.0, 0.0, 1024.0, 704.0) no title
-        print self.bounds	#(0.0, 0.0, 1024.0, 704.0)
+        print self.frame	#(0.0, 64.0, 1024.0, 704.0) with title bar // (0.0, 0.0, 1024.0, 768.0) no title bar
+        print self.bounds	#(0.0, 0.0, 1024.0, 704.0 or 768.0)
 
     def remove(self, sender):
         label = self['Label']
