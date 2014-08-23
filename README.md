@@ -15,6 +15,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 8.) MultipleViews => add and remove views/elements at run time<br />
 9.) MultipleViews_v2 => get the screen size / orientation // implement did_load and draw<br />
 10.) Webbrowser<br />
+11.) SpecialButton => control all touch events (touch_began, _moved, _ended)<br/>
 
 <br />
 
