@@ -2,7 +2,7 @@
 
 import console, os, ui
 
-class ShowTableView(ui.View):
+class ShowTableView(object):
     def __init__(self):
         self.view = ui.load_view('ShowTableView')
         self.view.present('fullscreen')
