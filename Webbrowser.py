@@ -10,17 +10,29 @@ favorites_html = '''<HTML><HEAD></HEAD><BODY><H1><P>
     <a href="http://omz-forums.appspot.com/pythonista">Pythonista Forum</a><br>
 </P></H1></BODY></HTML>'''
 
+back = ui.ButtonItem()
+back.image = ui.Image.named('ionicons-arrow-left-b-32')
+forward = ui.ButtonItem()
+forward.image = ui.Image.named('ionicons-arrow-right-b-32')
+
+home = ui.ButtonItem()
+home.image = ui.Image.named('ionicons-home-32')
+favorite = ui.ButtonItem()
+favorite.image = ui.Image.named('ionicons-bookmark-32')
+
 class Webbrowser(ui.View):
     def __init__(self):
+        back.action = self.bt_back
+        forward.action = self.bt_forward
+        home.action = self.bt_home
+        favorite.action = self.bt_favorite
+        self.left_button_items = [back, forward]
+        self.right_button_items = [home, favorite]
         self.present()
 
     def did_load(self):
         self.name = 'Webbrowser'
         self['textfield1'].delegate = self['webview1'].delegate = self
-        self['button1'].action = self.bt_back
-        self['button2'].action = self.bt_forward
-        self['button3'].action = self.bt_home
-        self['button4'].action = self.bt_favorite
         self.bt_home(None)
 
     def load_url(self, url=None):
@@ -56,6 +68,5 @@ class Webbrowser(ui.View):
 
     def webview_did_fail_load(self, webview, error_code, error_msg):
         self['textfield1'].text_color = 'red'
-
 
 ui.load_view('Webbrowser')  # Custom View Class in the .pyui file must be set to Webbrowser
