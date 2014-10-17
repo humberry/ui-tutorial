@@ -16,7 +16,7 @@ to speed up the process and write only some code. Please be patient, I'm startin
 9. MultipleViews_v2 => get the screen size / orientation // implement did_load and draw<br />
 10. Webbrowser<br />
 11. SpecialButton => control all touch events (touch_began, _moved, _ended)<br/>
-
+12. segmented-control written by tjferry14<br />
 <br />
 
 
@@ -26,4 +26,3 @@ More complex scripts can be found here:<br />
 
 [hexviewer]: https://github.com/humberry/hexviewer
 [SFTPclient]: https://github.com/humberry/sftp-client
-
