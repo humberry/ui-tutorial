@@ -2,7 +2,7 @@ ui-tutorial
 ===========
 
 As you surely noticed there are two ways of writing a ui-script. If you use only a few GUI elements you might write all 
-the code in your script.py, but that's not what I want to show you here. I want to show you how to use the UI design tool
+the code in your script.py, but that's not what I want to show you first. I want to show you how to use the UI design tool
 to speed up the process and write only some code. Please be patient, I'm starting with the basics.
 
 1. Untitled 1 => hello world script<br />
@@ -21,9 +21,11 @@ to speed up the process and write only some code. Please be patient, I'm startin
 <br />
 
 
-More complex scripts can be found here:<br />
+Other ui scripts can be found here:<br />
+[FileManager][]<br />
 [hexviewer][]<br />
 [SFTPclient][]<br />
 
+[FileManager]: https://github.com/humberry/FileManager
 [hexviewer]: https://github.com/humberry/hexviewer
 [SFTPclient]: https://github.com/humberry/sftp-client
