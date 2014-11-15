@@ -14,22 +14,27 @@ class SwitchViews(ui.View):
         self.view_index = -1
         self.view_array = []
         
+        # load and hide views
         for i in range(len(self.view_names)):
             self.view_index += 1
             self.view_array.append(ui.load_view(self.view_names[self.view_index]))
             self.add_subview(self.view_array[self.view_index])
             self.view_array[self.view_index].hidden = True
         
+        # initialize some actions
         self.view_array[0]['btn_Okay'].action = self.all_action
         self.view_array[0]['btn_Cancel'].action = self.all_action
         self.view_array[1]['button1'].action = self.all_action
         
+        # show empty white view
         self.background_color = 'white'
         back.action = self.bt_back
         forward.action = self.bt_forward
         self.left_button_items = [space, back]
         self.right_button_items = [space, space, forward]
         self.present()
+
+        # show view 'SwitchViews'
         self.switch_views()
 
     def bt_back(self, sender):
