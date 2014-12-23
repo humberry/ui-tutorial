@@ -23,7 +23,10 @@ to speed up the process and write only some code.
 
 
 Other UI scripts can be found here:
-+ [FileManager]: https://github.com/humberry/FileManager
-+ [hexviewer]: https://github.com/humberry/hexviewer
-+ [SFTPclient]: https://github.com/humberry/sftp-client
++ [FileManager][]
++ [hexviewer][]
++ [SFTPclient][] 
 
+[FileManager]: https://github.com/humberry/FileManager
+[hexviewer]: https://github.com/humberry/hexviewer
+[SFTPclient]: https://github.com/humberry/sftp-client
