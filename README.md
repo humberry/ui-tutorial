@@ -22,11 +22,8 @@ to speed up the process and write only some code.
 + **SwitchViews.py** - Show and hide complex views (my own NavView). Don't forget `test.pyui` and `space.png`
 
 
-Other UI scripts can be found here:<br />
-[FileManager][]<br />
-[hexviewer][]<br />
-[SFTPclient][]<br />
+Other UI scripts can be found here:
++ [FileManager][https://github.com/humberry/FileManager]
++ [hexviewer][https://github.com/humberry/hexviewer]
++ [SFTPclient][https://github.com/humberry/sftp-client]
 
-[FileManager]: https://github.com/humberry/FileManager
-[hexviewer]: https://github.com/humberry/hexviewer
-[SFTPclient]: https://github.com/humberry/sftp-client
