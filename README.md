@@ -17,8 +17,8 @@ to speed up the process and write only some code.
 + **SpecialButton.py** - Control all touch events (`touch_began`, `touch_moved`, `touch_ended`)
 + **segmented-control.py** - Example of how to use a segmented control (written by tjferry14)
 + **MyImageView.py** - View all JPGs in the current directory
-+ **NavigationViewExample.py** - Don't forget `test.pyui` (the subview)
-+ **SwitchViews.py** - Show and hide complex views (my own NavView). Don't forget `test.pyui` and `space.png`
++ **NavigationViewExample.py** - Shows an example of using the Navigation View
++ **SwitchViews.py** - Show and hide different views
 
 
 Other UI scripts can be found here:
