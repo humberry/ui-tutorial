@@ -2,20 +2,15 @@
 
 import ui
 
-class MultipleViews(ui.View):
+class UsingSubviews(ui.View):
     def __init__(self):
         self.labelcounter = 0
-        self.present()          #self.present(hide_title_bar = True)
+        self.present(hide_title_bar = True)
 
     def did_load(self):
         self['bt_remove_label'].action = self.remove
         self['bt_add_label'].action = self.add
         self.add(None, text='First Run')
-
-    def draw(self):
-        print self.name
-        print self.frame	#(0.0, 64.0, 1024.0, 704.0) with title bar // (0.0, 0.0, 1024.0, 768.0) no title bar
-        print self.bounds	#(0.0, 0.0, 1024.0, 704.0 or 768.0)
 
     def remove(self, sender):
         label = self['Label']
@@ -30,7 +25,4 @@ class MultipleViews(ui.View):
         label.x = label.y = self.labelcounter * 20
         self.add_subview(label)
 
-ui.load_view()  # Custom View Class = MultipleViews
-
-# Extra credit: modify remove() to delete the newest label first
-#                              instead of the oldest label first.
+ui.load_view()  # Custom View Class = UsingSubviews

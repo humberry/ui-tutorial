@@ -12,8 +12,7 @@ to speed up the process and write only some code.
 + **pop-over.py** - Barebone example of how to use a pop over view
 + **AreYouEnabledView.py** - Advanced example with `textfield_did_change`, `console_alert`, `speech`, etc... (written by cclauss)
 + **ShowTableView.py** - Directory table, empty table and table with different accessory_types/images
-+ **MultipleViews.py** - Add and remove views/elements at run time
-+ **MultipleViews_v2.py** - Get the screen size / orientation // implement `did_load` and `draw`
++ **UsingSubviews.py** - Demonstrates how to add and remove subviews
 + **Webbrowser.py** - Example of a basic web browser
 + **SpecialButton.py** - Control all touch events (`touch_began`, `touch_moved`, `touch_ended`)
 + **segmented-control.py** - Example of how to use a segmented control (written by tjferry14)
