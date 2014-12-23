@@ -2,15 +2,15 @@
 
 import ui
 
-v = ui.load_view('segmented-control')
+view = ui.load_view('segmented-control')
 
 def button_action(sender):
 	if button1.selected_index == 0:
-		v['text_label'].text = 'Hello'
+		view['text_label'].text = 'Hello'
 	elif button1.selected_index == 1:
-		v['text_label'].text ='World'
+		view['text_label'].text ='World'
 
-button1 = v['segmentedcontrol1']
+button1 = view['segmentedcontrol1']
 button1.action = button_action
 
-v.present('sheet')
+view.present('sheet')
