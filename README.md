@@ -10,13 +10,13 @@ to speed up the process and write only some code.
 + **shoppinglist.py** - Button, tableview and textfield use
 + **layout.py** - Automatic resize ui elements
 + **pop-over.py** - Barebone example of how to use a pop over view
-+ **AreYouEnabledView.py** - Advanced example with textfield_did_change, console_alert, speech, ... (written by cclauss)
++ **AreYouEnabledView.py** - Advanced example with `textfield_did_change`, `console_alert`, `speech`, etc... (written by cclauss)
 + **ShowTableView.py** - Directory table, empty table and table with different accessory_types/images
 + **MultipleViews.py** - Add and remove views/elements at run time
-+ **MultipleViews_v2.py** - Get the screen size / orientation // implement did_load and draw
++ **MultipleViews_v2.py** - Get the screen size / orientation // implement `did_load` and `draw`
 + **Webbrowser.py** - Example of a basic web browser
-+ **SpecialButton.py** - Control all touch events (touch_began, _moved, _ended)
-+ **segmented-control.py** - ** example of how to use a segmented control (written by tjferry14)
++ **SpecialButton.py** - Control all touch events (`touch_began`, `touch_moved`, `touch_ended`)
++ **segmented-control.py** - ** Example of how to use a segmented control (written by tjferry14)
 + **MyImageView.py** - View all JPGs in the current directory
 + **NavigationViewExample.py** - Don't forget `test.pyui` (the subview)
 + **SwitchViews.py** - Show and hide complex views (my own NavView 😄). Don't forget `test.pyui` and `space.png`
