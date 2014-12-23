@@ -16,9 +16,9 @@ to speed up the process and write only some code. Please be patient, I'm startin
 9. MultipleViews_v2 => get the screen size / orientation // implement did_load and draw<br />
 10. Webbrowser<br />
 11. SpecialButton => control all touch events (touch_began, _moved, _ended)<br/>
-12. segmented-control written by tjferry14<br />
+12. segmented-control (written by tjferry14)<br />
 13. MyImageView => view all JPGs in the current directory<br />
-14. NavigationViewExample => don't forget test.pyui (the subview)<br />
+14. NavigationViewExample => don't forget `test.pyui` (the subview)<br />
 15. SwitchViews => show and hide complex views (my own NavView 😄). Don't forget test.pyui and space.png<br />
 <br />
 
