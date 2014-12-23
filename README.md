@@ -5,7 +5,7 @@ As you surely noticed there are two ways of writing a ui-script. If you use only
 the code in your script.py, but that's not what I want to show you first. I want to show you how to use the UI design tool
 to speed up the process and write only some code.
 
-+ **Untitled 1.py** - Hello world script
++ **Untitled 1.py** - Shows How to load a `.pyui` file 
 + **hello_world_v2.py** - Change the label every second
 + **shoppinglist.py** - Button, tableview and textfield use
 + **layout.py** - Automatic resize ui elements
@@ -16,10 +16,10 @@ to speed up the process and write only some code.
 + **MultipleViews_v2.py** - Get the screen size / orientation // implement `did_load` and `draw`
 + **Webbrowser.py** - Example of a basic web browser
 + **SpecialButton.py** - Control all touch events (`touch_began`, `touch_moved`, `touch_ended`)
-+ **segmented-control.py** - ** Example of how to use a segmented control (written by tjferry14)
++ **segmented-control.py** - Example of how to use a segmented control (written by tjferry14)
 + **MyImageView.py** - View all JPGs in the current directory
 + **NavigationViewExample.py** - Don't forget `test.pyui` (the subview)
-+ **SwitchViews.py** - Show and hide complex views (my own NavView 😄). Don't forget `test.pyui` and `space.png`
++ **SwitchViews.py** - Show and hide complex views (my own NavView). Don't forget `test.pyui` and `space.png`
 
 
 Other UI scripts can be found here:<br />
