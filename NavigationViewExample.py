@@ -20,7 +20,7 @@ class NavView(ui.View):
         self.nav_view.present(hide_title_bar=True)
         
     def bt_subview(self, sender):
-        sub_view = ui.load_view('test.pyui')
+        sub_view = ui.load_view('switchview1.pyui')
         sub_view.name = 'subview'
         sub_view['btn_Okay'].action = self.bt_action
         sub_view['btn_Cancel'].action = self.bt_action

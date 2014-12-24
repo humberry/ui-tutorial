@@ -10,7 +10,7 @@ space.image = ui.Image.named('space.png')
 
 class SwitchViews(ui.View):
     def __init__(self):
-        self.view_names = ['test', 'SwitchViews']
+        self.view_names = ['switchview1', 'SwitchViews']
         self.view_index = -1
         self.view_array = []
         
