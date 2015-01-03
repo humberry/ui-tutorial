@@ -2,20 +2,14 @@
 
 import ui
 
+def make_button_item(action, image_name):
+    return ui.ButtonItem(action=action, image=ui.Image.named(image_name))
+
 class NavView(ui.View):
     def __init__(self):
         root_view = ui.load_view()
-
-        close = ui.ButtonItem()
-        close.image = ui.Image.named('ionicons-close-24')
-        close.action = self.bt_close
-        root_view.left_button_items = [close]
-
-        right = ui.ButtonItem()
-        right.image = ui.Image.named('ionicons-arrow-right-b-24')
-        right.action = self.bt_subview
-        root_view.right_button_items = [right]
-        
+        root_view.left_button_items  = [make_button_item(self.bt_close,   'ionicons-close-24')]
+        root_view.right_button_items = [make_button_item(self.bt_subview, 'ionicons-arrow-right-b-24')]
         self.nav_view = ui.NavigationView(root_view)
         self.nav_view.present(hide_title_bar=True)
         
