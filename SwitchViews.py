@@ -38,17 +38,11 @@ class SwitchViews(ui.View):
         self.switch_views()
 
     def bt_back(self, sender):
-        if (self.view_index - 1) >= 0:
-            self.view_index -= 1
-        else:
-            self.view_index = len(self.view_array) - 1
+        self.view_index = (self.view_index - 1) % len(self.view_array)
         self.switch_views()
 
     def bt_forward(self, sender):
-        if (self.view_index + 1) <= (len(self.view_array) - 1):
-            self.view_index += 1
-        else:
-            self.view_index = 0
+        self.view_index = (self.view_index + 1) % len(self.view_array)
         self.switch_views()
     
     def switch_views(self):
