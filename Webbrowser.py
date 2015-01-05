@@ -10,22 +10,15 @@ favorites_html = '''<HTML><HEAD></HEAD><BODY><H1><P>
     <a href="http://omz-forums.appspot.com/pythonista">Pythonista Forum</a><br>
 </P></H1></BODY></HTML>'''
 
-back = ui.ButtonItem()
-back.image = ui.Image.named('ionicons-arrow-left-b-32')
-forward = ui.ButtonItem()
-forward.image = ui.Image.named('ionicons-arrow-right-b-32')
-
-home = ui.ButtonItem()
-home.image = ui.Image.named('ionicons-home-32')
-favorite = ui.ButtonItem()
-favorite.image = ui.Image.named('ionicons-bookmark-32')
+def make_button_item(action, image_name):
+    return ui.ButtonItem(action=action, image=ui.Image.named(image_name))
 
 class Webbrowser(ui.View):
     def __init__(self):
-        back.action = self.bt_back
-        forward.action = self.bt_forward
-        home.action = self.bt_home
-        favorite.action = self.bt_favorite
+        back     = make_button_item(self.bt_back,     'ionicons-arrow-left-b-32')
+        forward  = make_button_item(self.bt_forward,  'ionicons-arrow-right-b-32')
+        home     = make_button_item(self.bt_home,     'ionicons-home-32')
+        favorite = make_button_item(self.bt_favorite, 'ionicons-bookmark-32')
         self.url = ''
         self.new_url = ''
         self.left_button_items = [back, forward]
