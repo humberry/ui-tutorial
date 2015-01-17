@@ -3,7 +3,7 @@ UI Tutorial
 
 As you surely noticed there are two ways of writing a ui-script. If you use only a few GUI elements you might write all 
 the code in your script.py, but that's not what is here. Here is how to use the UI design tool
-to speed up the process and write only little code. To get a summary see the ui-tutorial.pdf.
+to speed up the process and write only little code. To get a summary see the **ui-tutorial.pdf**.
 
 + **load_ui.py** - Shows how to load a `.pyui` file 
 + **hello_world_v2.py** - Change the label every second
