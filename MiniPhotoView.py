@@ -22,7 +22,6 @@ class MyPictureView(ui.View):
             img = ui.Image.from_data(photos.get_image(i,raw_data=True))
             w, h = img.size
             rat = h / w
-            #print 'Image[' + str(i) + ']: w=' + str(w) + ', h=' + str(h) + ', ratio=' + str(rat)
             x_ratio = 1.0
             y_ratio = 1.0
             x = framesize
