@@ -12,12 +12,8 @@ class MyPictureView(ui.View):
         ih = self.iheight - 2 * framesize
         ratio = ih / iw
         self.img = []
-        self.imgcount = photos.get_count()
-        if self.imgcount < 100:
-            console.hud_alert('Please wait while {} photos are loading...'.format(self.imgcount))
-        else:
-            console.hud_alert('Please wait while 100 photos are loading...')
-            self.imgcount = 100
+        self.imgcount = min(photos.get_count(), 100)
+        console.hud_alert('Please wait while {} photos are loading...'.format(self.imgcount))
         for i in xrange(self.imgcount):
             img = ui.Image.from_data(photos.get_image(i,raw_data=True))
             w, h = img.size
