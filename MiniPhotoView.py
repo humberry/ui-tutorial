@@ -6,10 +6,11 @@ class MyPictureView(ui.View):
     def __init__(self, width, height):
         self.frame = (0,0,width,height)
         self.iwidth = 200.0
-        self.iheight = 150.0
-        framesize = 5
+        self.iheight = 200.0
+        framesize = 10
         iw = self.iwidth - 2 * framesize
         ih = self.iheight - 2 * framesize
+        
         ratio = ih / iw
         self.img = []
         self.imgcount = min(photos.get_count(), 100)
@@ -22,12 +23,30 @@ class MyPictureView(ui.View):
             y_ratio = 1.0
             x = framesize
             y = framesize
-            if rat > ratio:    #portrait
-                x = ((iw - ih * rat) / 2) + framesize
-                x_ratio = ih * rat / iw
-            else:            #landscape
-                y = ((ih - iw * rat) / 2) + framesize 
-                y_ratio = iw * rat / ih
+            
+            if ratio < 1:      #landscape canvas
+                if rat <= ratio:     #full width
+                    y = ((ih - iw * rat) / 2) + framesize
+                    y_ratio = iw * rat / ih
+                else:                #full height
+                    x = ((iw - ih / rat) / 2) + framesize
+                    x_ratio = ih / rat / iw
+            elif ratio > 1:    #portrait canvas
+                if rat > ratio:      #full height
+                    x = ((iw - ih / rat) / 2) + framesize
+                    x_ratio = ih / rat / iw
+                else:                #full width
+                    y = ((ih - iw * rat) / 2) + framesize
+                    y_ratio = iw * rat / ih
+            else:              #cubic canvas
+                if rat < 1:          #full width
+                    y = ((ih - iw * rat) / 2) + framesize
+                    y_ratio = iw * rat / ih
+                elif rat > 1:        #full height
+                    x = ((iw - ih / rat) / 2) + framesize
+                    x_ratio = ih / rat / iw
+                else:                #cubic
+                    pass             #x_ratio = y_ratio = 1.0
             with ui.ImageContext(self.iwidth, self.iheight) as ctx:
                 img.draw(x,y,iw * x_ratio,ih * y_ratio)
                 self.img.append(ctx.get_image())
