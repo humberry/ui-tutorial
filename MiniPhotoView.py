@@ -16,6 +16,10 @@ class MyPictureView(ui.View):
         self.imgcount = min(photos.get_count(), 100)
         console.hud_alert('Please wait while {} photos are loading...'.format(self.imgcount))
         for i in xrange(self.imgcount):
+            s = photos.get_metadata(i)
+            if s['filename'][-3:] == 'MOV':     #skip movies
+                self.img.append(None)
+                continue
             img = ui.Image.from_data(photos.get_image(i,raw_data=True))
             w, h = img.size
             rat = h / w
@@ -61,9 +65,10 @@ class MyPictureView(ui.View):
             for column in xrange(10):
                 if i == self.imgcount:
                     break
-                x = column * self.iwidth
-                y = row * self.iheight
-                self.img[i].draw(x,y,self.iwidth,self.iheight)
+                if self.img[i]:
+                    x = column * self.iwidth
+                    y = row * self.iheight
+                    self.img[i].draw(x,y,self.iwidth,self.iheight)
                 i += 1
         
     def layout(self):
