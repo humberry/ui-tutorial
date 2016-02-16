@@ -71,12 +71,6 @@ class MyPictureView(ui.View):
                     self.img[i].draw(x,y,self.iwidth,self.iheight)
                 i += 1
         
-    def layout(self):
-        pass
-
-    def touch_began(self, touch):
-        pass
-
 class MiniPhotoView(ui.View):
     def __init__(self):
         self.view = ui.View(background_color='lightyellow')
