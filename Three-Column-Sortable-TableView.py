@@ -76,7 +76,7 @@ class MyTableView(ui.View):
         names = [self.btn_name.name, self.btn_size.name, self.btn_date.name]
         sender_index = names.index(sender.name)
         if self.active_button == sender.name:
-            if sender.background_color == (1.0, 1.0, 1.0, 1.0):    #change this if unselect_color isn't white
+            if sender.background_color == self.unselect_color:
                 sender.background_color = self.select_color
                 self.all_items = sorted(self.all_items, key=itemgetter(sender_index))
             else:
