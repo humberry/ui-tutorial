@@ -19,6 +19,7 @@ to speed up the process and write only little code. To get a summary see the **u
 + **MyImageView.py** - View all JPGs in the current directory
 + **NavigationViewExample.py** - Shows an example of using the Navigation View
 + **SwitchViews.py** - Show and hide different views
++ **Three-Column-Sortable-TableView.py** - Sort any of the three columns in ascending or decending order
 
 
 Other UI scripts can be found here:
