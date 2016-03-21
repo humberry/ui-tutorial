@@ -14,9 +14,8 @@ class MyTableViewDataSource (object):
         self.width, height = ui.get_screen_size()
         cell = ui.TableViewCell()
         cell.bounds = (0,0,self.width,self.row_height)
-        self.make_labels(cell, tableview.data_source.items[row][0], 0)
-        self.make_labels(cell, tableview.data_source.items[row][1], 1)
-        self.make_labels(cell, tableview.data_source.items[row][2], 2)
+        for i in range(3):
+            self.make_labels(cell, tableview.data_source.items[row][i], i)
         return cell
         
     def make_labels(self, cell, text, pos):
@@ -74,39 +73,31 @@ class MyTableView(ui.View):
         return button
         
     def btn_action(self, sender):
+        names = [self.btn_name.name, self.btn_size.name, self.btn_date.name]
+        sender_index = names.index(sender.name)
         if self.active_button == sender.name:
-            if sender.background_color == (1.0, 1.0, 1.0, 1.0):    #change this if unselect_color isn't white
+            if sender.background_color == self.unselect_color:
                 sender.background_color = self.select_color
-                if sender.name == self.btn_name.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(0))
-                elif sender.name == self.btn_size.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(1))
-                elif sender.name == self.btn_date.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(2))
+                self.all_items = sorted(self.all_items, key=itemgetter(sender_index))
             else:
                 sender.background_color = self.unselect_color
-                if sender.name == self.btn_name.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(0), reverse=True)
-                elif sender.name == self.btn_size.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(1), reverse=True)
-                elif sender.name == self.btn_date.name:
-                    self.all_items = sorted(self.all_items, key=itemgetter(2), reverse=True)
+                self.all_items = sorted(self.all_items, key=itemgetter(sender_index), reverse=True)
         else:
             if self.active_button == None:
                 self.active_button = sender.name
             if sender.name == self.btn_name.name:
                 self.btn_name.background_color = self.select_color
-                self.all_items = sorted(self.all_items, key=itemgetter(0))
+                self.all_items = sorted(self.all_items, key=itemgetter(sender_index))
             else:
                 self.btn_name.background_color = self.unselect_color
             if sender.name == self.btn_size.name:
                 self.btn_size.background_color = self.select_color
-                self.all_items = sorted(self.all_items, key=itemgetter(1))
+                self.all_items = sorted(self.all_items, key=itemgetter(sender_index))
             else:
                 self.btn_size.background_color = self.unselect_color
             if sender.name == self.btn_date.name:
                 self.btn_date.background_color = self.select_color
-                self.all_items = sorted(self.all_items, key=itemgetter(2))
+                self.all_items = sorted(self.all_items, key=itemgetter(sender_index))
             else:
                 self.btn_date.background_color = self.unselect_color
         self.tv.data_source.items = self.all_items
