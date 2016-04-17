@@ -14,7 +14,7 @@ class MyView(ui.View):
         self.sv = ui.ScrollView()
         self.sv.width = w
         self.sv.height = h*0.25
-        self.sv.content_size = (2*w, h*0.25)
+        self.sv.content_size = (2*w, h*0.25)    #content width is double wide! with the same width it won't scroll.
         self.sv.add_subview(self.ty)
         self.add_subview(self.sv)
 view = MyView()
