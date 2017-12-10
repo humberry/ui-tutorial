@@ -24,7 +24,7 @@ to speed up the process and write only little code. To get a summary see the **u
 
 
 Other UI scripts can be found here:
-+ [FileManager][]
++ [PhoneManager][]
 + [hexviewer][]
 + [SFTPclient][] 
 
