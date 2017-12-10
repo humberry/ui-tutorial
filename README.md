@@ -28,6 +28,6 @@ Other UI scripts can be found here:
 + [hexviewer][]
 + [SFTPclient][] 
 
-[FileManager]: https://github.com/humberry/FileManager
+[PhoneManager]: https://github.com/humberry/PhoneManager
 [hexviewer]: https://github.com/humberry/hexviewer
 [SFTPclient]: https://github.com/humberry/sftp-client
