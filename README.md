@@ -21,6 +21,7 @@ to speed up the process and write only little code. To get a summary see the **u
 + **SwitchViews.py** - Show and hide different views
 + **MiniPhotoView.py** - Shows up to 100 photos from your camera roll
 + **Three-Column-Sortable-TableView.py** - Sort any of the three columns in ascending or descending order
++ **MyView.py** – When is layout and when is draw called. Draw with icon, line and text.
 
 
 Other UI scripts can be found here:
