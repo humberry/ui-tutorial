@@ -10,7 +10,7 @@ def Img2ui(ip):
     with io.BytesIO() as bIO:
         ip.save(bIO, 'PNG')
         img = ui.Image.from_data(bIO.getvalue())
-        img = img.with_rendering_mode(ui.RENDERING_MODE_ORIGINAL)
+        img = img.with_rendering_mode(ui.RENDERING_MODE_ORIGINAL) # if you use ui.RENDERING_MODE_TEMPLATE yout text is black
         return img
 
 class MyView (ui.View):
