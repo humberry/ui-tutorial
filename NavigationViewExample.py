@@ -24,6 +24,6 @@ class NavView(ui.View):
         self.nav_view.close()
         
     def bt_action(self, sender):
-        print 'action from ' + sender.name
+        print('action from ' + sender.name)
 
 NavView()
