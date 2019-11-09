@@ -22,13 +22,13 @@ class MyImageView(ui.View):
                 if entry.find('.jpg') >= 0:
                     self.files.append(entry)
         self.nr_files = len(self.files)
-        print 'files = ' + str(self.nr_files)
+        print('files = ' + str(self.nr_files))
         if self.nr_files > 0:
             self.img = ui.Image.named(self.files[self.index])
             self.img_width, self.img_height = self.img.size
             self.name = self.root + '/' + self.files[self.index]
         else:
-            print 'Sorry, no images in this directory.'
+            print('Sorry, no images in this directory.')
             sys.exit()
 
     def draw(self):
@@ -76,7 +76,7 @@ class MyImageView(ui.View):
             else:
                 self.ratio = y_ratio
         else:
-            print 'This should never happen. :('
+            print('This should never happen. :(')
 
 view = MyImageView()
 view.present('fullscreen')
