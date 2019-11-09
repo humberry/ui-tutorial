@@ -22,7 +22,7 @@ class MyImageView(ui.View):
                 if entry.find('.jpg') >= 0:
                     self.files.append(entry)
         self.nr_files = len(self.files)
-        print 'files = ' + str(self.nr_files)
+        print('files = ' + str(self.nr_files))
         if self.nr_files > 0:
             self.img = ui.Image.named(self.files[self.index])
             self.img_width, self.img_height = self.img.size
