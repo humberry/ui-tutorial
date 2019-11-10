@@ -52,6 +52,6 @@ class SwitchViews(ui.View):
         self.name = self.view_names[self.view_index]
 
     def all_action(self, sender):
-        print 'action from ' + sender.name
+        print('action from ' + sender.name)
         
 SwitchViews()
