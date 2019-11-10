@@ -14,7 +14,9 @@ class MyPictureView(ui.View):
         ratio = ih / iw
         self.img = []
         self.imgcount = min(photos.get_count(), 100)
-        console.hud_alert("Please wait while {} photos are loading...".format(self.imgcount))
+        console.hud_alert(
+            "Please wait while {} photos are loading...".format(self.imgcount)
+        )
         for i in range(self.imgcount):
             s = photos.get_metadata(i)
             if s['filename'][-3:] == 'MOV':     #skip movies
@@ -88,4 +90,4 @@ class MiniPhotoView(ui.View):
 if photos.get_count():
     MiniPhotoView()
 else:
-    print('Sorry no access or no pictures.')
+    print("Sorry no access or no pictures.")
