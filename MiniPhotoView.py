@@ -15,7 +15,7 @@ class MyPictureView(ui.View):
         self.img = []
         self.imgcount = min(photos.get_count(), 100)
         console.hud_alert('Please wait while {} photos are loading...'.format(self.imgcount))
-        for i in xrange(self.imgcount):
+        for i in range(self.imgcount):
             s = photos.get_metadata(i)
             if s['filename'][-3:] == 'MOV':     #skip movies
                 self.img.append(None)
@@ -61,8 +61,8 @@ class MyPictureView(ui.View):
             endrow = self.imgcount / 10 + 1
         else:
             endrow = 10
-        for row in xrange(endrow):
-            for column in xrange(10):
+        for row in range(endrow):
+            for column in range(10):
                 if i == self.imgcount:
                     break
                 if self.img[i]:
