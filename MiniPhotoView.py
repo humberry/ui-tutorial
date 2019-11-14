@@ -61,7 +61,7 @@ class MyPictureView(ui.View):
     def draw(self):
         i = 0
         if self.imgcount < 100:
-            endrow = self.imgcount / 10 + 1
+            endrow = self.imgcount // 10 + 1
         else:
             endrow = 10
         for row in range(endrow):
