@@ -1,6 +1,7 @@
 import sys
 from collections import namedtuple
-from mocks import ui
+
+from tests.mocks import ui
 
 #mock pythonista ui package
 sys.modules['ui'] = ui
