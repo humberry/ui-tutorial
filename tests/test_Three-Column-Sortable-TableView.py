@@ -4,7 +4,7 @@ from mocks import ui
 
 #mock pythonista ui package
 sys.modules['ui'] = ui
-from src.scripts.Three_Column_Sortable_TableView import MyTableView
+from scripts.Three_Column_Sortable_TableView import MyTableView
 
 import pytest
 
