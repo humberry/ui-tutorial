@@ -61,7 +61,7 @@ class MyTableView(ui.View):
         # self.tv.delegate = MyTableViewDelegate()
         self.tv.allows_selection = False
         self.add_subview(self.tv)
-        self.present("full_screen")
+        self.present("fullscreen")
 
     def make_buttons(self, name):
         button = ui.Button()
@@ -143,7 +143,10 @@ class MyTableView(ui.View):
 
     def get_dir(self):
         path = os.getcwd()
-        self.dirs = [] if path == os.path.expanduser("~") else [["..", "<DIR>", 0.0]]
+        if path == os.path.expanduser("~"):
+            self.dirs = [] 
+        else:
+            [["..", "<DIR>", 0.0]]
         self.files = []
         for entry in sorted(os.listdir(path)):
             full_pathname = path + "/" + entry
