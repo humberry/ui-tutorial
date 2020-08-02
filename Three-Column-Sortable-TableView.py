@@ -112,7 +112,7 @@ class MyTableView(ui.View):
         if path == os.path.expanduser("~"):
           self.dirs = [] 
         else:
-          [["..", "<DIR>", 0.0]]
+          self.dirs = [["..", 0, 0.0]]
         self.files = []
         for entry in sorted(os.listdir(path)):
             full_pathname = path + "/" + entry
