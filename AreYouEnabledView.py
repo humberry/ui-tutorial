@@ -5,7 +5,6 @@ import console, speech, ui
 
 class AreYouEnabledView(ui.View):
     def __init__(self):
-        self.present("sheet")
         print("-" * 20)  # sheets are useful for seeing the console below them
 
     def did_load(self):
@@ -79,3 +78,4 @@ class AreYouEnabledView(ui.View):
 
 # in the .pyui file, the "Custom View Class" must be set to AreYouEnabledView
 view = ui.load_view()
+view.present("sheet")
