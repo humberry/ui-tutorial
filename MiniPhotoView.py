@@ -14,16 +14,13 @@ class MyPictureView(ui.View):
 
         ratio = ih / iw
         self.img = []
-        self.imgcount = min(photos.get_count(), 100)
+        ass = photo.get_assets(media_type='image')
+        self.imgcount = min(len(ass), 100)
         console.hud_alert(
             "Please wait while {} photos are loading...".format(self.imgcount)
         )
         for i in range(self.imgcount):
-            s = photos.get_metadata(i)
-            if s["filename"][-3:] == "MOV":  # skip movies
-                self.img.append(None)
-                continue
-            img = ui.Image.from_data(photos.get_image(i, raw_data=True))
+            img = ui.Image.from_data(ass[i].get_image_data().read())
             w, h = img.size
             rat = h / w
             x_ratio = 1.0
