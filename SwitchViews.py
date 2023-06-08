@@ -12,6 +12,7 @@ space.image = ui.Image.named("space.png")
 
 class SwitchViews(ui.View):
     def __init__(self):
+        self.present()
         self.view_names = ["switchview1", "SwitchViews"]
         self.view_index = -1
         self.view_array = []
@@ -34,7 +35,6 @@ class SwitchViews(ui.View):
         forward.action = self.bt_forward
         self.left_button_items = [space, back]
         self.right_button_items = [space, space, forward]
-        self.present()
 
         # show view 'SwitchViews'
         self.switch_views()
