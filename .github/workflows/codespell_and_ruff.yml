@@ -5,12 +5,13 @@ on:
   push:
   #  branches: [master]
   pull_request:
-  #  branches: [master]
+    branches: [master]
 jobs:
   codespell_and_ruff:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - run: pip install --user codespell[toml] ruff
-    - run: codespell || true  # --ignore-words-list="" --skip="*.css,*.js,*.lock,*.po"
-    - run: ruff --format=github --line-length=103 --select=C4,C9,E9,F63,F7,F82,W --target-version=py310 .
+    - run: codespell --quiet-level=1
+    - run: ruff --format=github --line-length=103 --target-version=py310
+                --select=C4,C9,E,F,PLE,PLW,W --ignore=E401,F401,F841 .
