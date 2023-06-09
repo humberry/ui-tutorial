@@ -3,7 +3,7 @@
 name: codespell_and_ruff
 on:
   push:
-    branches: [master]
+  #  branches: [master]
   pull_request:
   #  branches: [master]
 jobs:
