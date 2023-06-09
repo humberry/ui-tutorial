@@ -5,7 +5,7 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: [master]
+  #  branches: [master]
 jobs:
   codespell_and_ruff:
     runs-on: ubuntu-latest
