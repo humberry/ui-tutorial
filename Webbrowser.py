@@ -26,7 +26,6 @@ class Webbrowser(ui.View):
         self.left_button_items = [back, forward]
         self.right_button_items = [home, favorite]
         self.name = "Webbrowser"
-        self.present()
 
     def did_load(self):
         self["textfield1"].clear_button_mode = "while_editing"
@@ -88,6 +87,5 @@ class Webbrowser(ui.View):
         # error_code: -1003, A server with the specified hostname could not be found.
 
 
-ui.load_view(
-    "Webbrowser"
-)  # Custom View Class in the .pyui file must be set to Webbrowser
+wb = ui.load_view("Webbrowser")  # Custom View Class in the .pyui file must be set to Webbrowser
+wb.present('fullscreen')
