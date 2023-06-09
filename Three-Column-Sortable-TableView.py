@@ -110,7 +110,7 @@ class MyTableView(ui.View):
     def get_dir(self):
         path = os.getcwd()
         if path == os.path.expanduser("~"):
-          self.dirs = [] 
+          self.dirs = []
         else:
           self.dirs = [["..", 0, 0.0]]
         self.files = []
