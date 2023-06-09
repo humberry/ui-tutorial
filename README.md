@@ -1,6 +1,10 @@
 UI Tutorial
 ===========
 
+![alt text](https://img.shields.io/badge/iOS-16.x-lightgrey.svg?style=plastic "iOS 16.x")
+![alt text](https://img.shields.io/badge/Pythonista-3.4-green.svg?style=plastic "Pythonista 3.4")
+![alt text](https://img.shields.io/badge/Python-3.10-blue.svg?style=plastic "Python 3.10")
+
 ![](https://api.travis-ci.org/humberry/ui-tutorial.svg)
 As you surely noticed there are two ways of writing a ui-script. If you use only a few GUI elements you might write all 
 the code in your script.py, but that's not what is here. Here is how to use the UI design tool
