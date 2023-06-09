@@ -14,7 +14,7 @@ class MyPictureView(ui.View):
 
         ratio = ih / iw
         self.img = []
-        ass = photo.get_assets(media_type='image')
+        ass = photos.get_assets(media_type='image')
         self.imgcount = min(len(ass), 100)
         console.hud_alert(
             "Please wait while {} photos are loading...".format(self.imgcount)
